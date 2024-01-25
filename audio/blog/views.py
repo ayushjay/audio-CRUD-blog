@@ -17,7 +17,7 @@ class PostCreateView(CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog/create_post.html"
-    success_url = "posts/"
+    success_url = "/posts/"
 
 
 class PostListView(ListView):
@@ -35,4 +35,4 @@ class PostDetailView(DetailView):
 class PostDeleteView(DeleteView):
     model = Post
     template_name = "blog/post_delete.html"
-    success_url = reverse_lazy("post-list")
+    success_url = reverse_lazy("blog:post-list")
