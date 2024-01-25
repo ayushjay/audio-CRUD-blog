@@ -15,7 +15,7 @@ class Author(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField(max_length=800)
-    audio = models.FileField(upload_to="media/audio/")
+    audio = models.FileField(upload_to="media/songdir")
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     date = models.DateTimeField(
         auto_now=True,

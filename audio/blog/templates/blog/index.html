@@ -15,13 +15,18 @@
 
 <h1>{{ post.title }}</h1>
 {{post.content}}
+<audio src="{{ post.audio.url }}" controls="controls">
+
+</audio>
 {{post.author}}
 {{post.date}}
-{{post.tags}}
+Tags: {% for tag in post.tags.all %}{{ tag }}{% if not forloop.last %}, {% endif %}{% endfor %}
 
 
 
 {% endfor %}
+<br>
+Create <a href="{% url 'blog:post-create' %}">Post</a>
     </div>
     {% block content %}
       <!-- default content text (typically empty) -->
