@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+      <title>Audio Blog</title>
+    {% endblock %}
+  </head>
+  <body>
+    <div class="topnav">
+     
+    </div>
+    <div>
+        <h1> Welcome to the Audio Blog</h1>
+{% for post in post_list %}
+
+<h1>{{ post.title }}</h1>
+{{post.content}}
+{{post.author}}
+{{post.date}}
+{{post.tags}}
+
+
+
+{% endfor %}
+    </div>
+    {% block content %}
+      <!-- default content text (typically empty) -->
+    {% endblock %}
+  </body>
+</html>
