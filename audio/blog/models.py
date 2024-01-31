@@ -22,8 +22,8 @@ class Post(models.Model):
     )
     tags = TaggableManager()
 
-    def get_absolute_url(self):
-        return reverse("report_user", kwargs={"username": self.reported})
+    # def get_absolute_url(self):
+    #    return reverse("report_user", kwargs={"username": self.reported})
 
     def __str__(self):
         return self.title

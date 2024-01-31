@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "taggit",
     "debug_toolbar",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
